@@ -47,7 +47,6 @@ export default function Login() {
     <div className="wrap">
       <div className="login-card panel" style={{ transform: "rotate(-0.5deg)" }}>
         <h3><LogIn size={16} /> Organizer sign in</h3>
-        <p className="sub">For organizers, admins and gate staff. Attendees never need an account — just buy tickets.</p>
         <form onSubmit={submit}>
           <div className="field"><label>Email</label><input type="email" value={form.email} onChange={set("email")} placeholder="organizer@habari.gh" autoFocus /></div>
           <div className="field"><label>Password</label><input type="password" value={form.password} onChange={set("password")} placeholder="••••••••" /></div>
@@ -58,9 +57,6 @@ export default function Login() {
 
         <GoogleButton onCredential={onGoogle} onError={(m) => setError(m)} />
 
-        <p className="sub" style={{ marginTop: 18, marginBottom: 0 }}>
-          Demo accounts — admin@habari.gh / admin123 · organizer@habari.gh / organizer123 · gate@habari.gh / gate123
-        </p>
       </div>
       <p style={{ textAlign: "center" }}><Link to="/" className="link-back">← Back to events</Link></p>
     </div>
